@@ -10,7 +10,7 @@
 First choose a name for your project. In this example, our project is called "the_oregon_trail"
 
 ```bash
-$ composer create-project -n concrete5/composer:8.x-dev the_oregon_trail
+$ composer create-project -n concrete5/composer the_oregon_trail
 ```
 
 Now you have the latest version of concrete5 and you're ready to install!
@@ -51,7 +51,18 @@ $ composer require concrete5/sample_composer_package
 $ ./vendor/bin/concrete5 c5:package-install sample_composer_package
 ```
 
+## Compiling JS / CSS assets
+This library uses [Laravel Mix][link-mix]. See [webpack.mix.js][link-webpack-mix-file].
+Using Yarn run (If you're using NPM instead, just swap `yarn` for `npm`.):
 
+```
+yarn install
+yarn dev
+```
+
+To compile assets for development.
+
+Do you want to install an add-on that is free in the concrete5 marketplace, but not on packagist.org? Go to https://composer.concrete5.org.
 
 [ico-version]: https://img.shields.io/packagist/v/concrete5/composer.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
@@ -61,3 +72,5 @@ $ ./vendor/bin/concrete5 c5:package-install sample_composer_package
 [link-packagist]: https://packagist.org/packages/concrete5/composer
 [link-travis]: https://travis-ci.org/concrete5/composer
 [link-downloads]: https://packagist.org/packages/concrete5/composer
+[link-mix]: https://laravel.com/docs/5.5/mix
+[link-webpack-mix-file]: ./webpack.mix.js
